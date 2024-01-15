@@ -1,0 +1,41 @@
+Name: Chan Chun Ming
+SID 1155163257
+CSCI 3150 Assignment 2:
+Q1(a)
+The file system has 2 direct block pointers and 1 indirect block in each inode.
+There are at most 1024 pointer in indirect block and assume each data block is 4KB.
+So, the maximum file size is (4 + 1024) x 4 = 4104KB
+Q1(b)
+(1) 6, 11, 34
+(2) 11, 34, 36, 40, 45, 46, 49
+(3) 11, 34
+(4) 40, 45, 46, 49, 51, 52, 54, 60, 71, 90
+Q2(a)
+Content of data block 0:
+. 0
+.. 0
+dir1 1
+dir2 2
+dir3 3
+file1 14
+Content of data block 1:
+. 1
+.. 0
+dir4 4
+Content of data block 5:
+. 5
+.. 2
+dir7 7
+dir8 8
+Content of data block 8:
+. 8
+.. 5
+dir11 11
+dir12 12
+Content of data block 10:
+. 10
+.. 6
+dir13 13
+Q2(b)
+inode 0 -> data block 0 -> inode 2 -> data block 2 -> inode 5 -> data block 5 -> inode 8 -> data block 8 
+-> inode 11 -> data block 11 -> inode 1
